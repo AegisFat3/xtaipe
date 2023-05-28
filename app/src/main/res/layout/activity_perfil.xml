@@ -305,6 +305,47 @@
 
                 </LinearLayout>
 
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.5"
+                    android:background="@color/eBlue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+
+                    <TextView
+                        android:id="@+id/dir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dirección"
+                        android:textColor="@color/eBlue"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/profiledir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="#F1F1F6"
+                        android:hint="Pepe 32 San Juan Joya"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
 
 
             </LinearLayout>
@@ -313,7 +354,7 @@
                 android:id="@+id/editBut"
                 android:layout_width="270dp"
                 android:layout_height="57dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="17dp"
                 android:layout_marginBottom="28dp"
                 android:gravity="center"
                 android:text="Editar Datos"
@@ -324,6 +365,25 @@
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="@id/linearLayout"
                 app:layout_constraintTop_toBottomOf="@id/linearLayout"
+                app:layout_constraintVertical_bias="0.236" />
+
+            <Button
+                android:id="@+id/salBut"
+                android:layout_width="270dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/bottom_bgred"
+                android:gravity="center"
+                android:text="Salir"
+                android:textSize="18sp"
+                app:backgroundTint="#6E0707"
+                app:cornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/editBut"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="@id/editBut"
+                app:layout_constraintTop_toBottomOf="@id/editBut"
                 app:layout_constraintVertical_bias="0.236" />
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -342,9 +402,9 @@
                 app:itemRippleColor="@android:color/transparent"
                 app:labelVisibilityMode="unlabeled"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/editBut"
-                app:layout_constraintStart_toStartOf="@id/editBut"
-                app:layout_constraintTop_toBottomOf="@id/editBut"
+                app:layout_constraintEnd_toEndOf="@id/salBut"
+                app:layout_constraintStart_toStartOf="@id/salBut"
+                app:layout_constraintTop_toBottomOf="@id/salBut"
                 app:menu="@menu/bottom_menu" />
 
 

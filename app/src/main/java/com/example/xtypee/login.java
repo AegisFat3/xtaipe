@@ -127,6 +127,7 @@ public class login extends AppCompatActivity {
                         String emailFromDB = snapshot.child(userUsername).child("correoi").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("usuarioi").getValue(String.class);
                         String fecFromDB = snapshot.child(userUsername).child("nacimi").getValue(String.class);
+                        String dirFromDB = snapshot.child(userUsername).child("direi").getValue(String.class);
                         String telFromDB = snapshot.child(userUsername).child("telefonoi").getValue(String.class);
                         Intent intent = new Intent(login.this, MainActivity.class);
                         intent.putExtra("nombrei", nameFromDB);
@@ -134,6 +135,7 @@ public class login extends AppCompatActivity {
                         intent.putExtra("usuarioi", usernameFromDB);
                         intent.putExtra("contrasenai", passwordFromDB);
                         intent.putExtra("nacimi", fecFromDB);
+                        intent.putExtra("direi", dirFromDB);
                         intent.putExtra("telefonoi", telFromDB);
                         startActivity(intent);
                     } else {

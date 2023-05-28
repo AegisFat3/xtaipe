@@ -20,7 +20,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 public class DetallesActivity extends AppCompatActivity {
-
+    public static String TAG = "mensaje";
     TextView detailDesc, detailTitle, detailLang;
     ImageView detailImage;
     FloatingActionButton deleteButton, editButton;
@@ -31,6 +31,16 @@ public class DetallesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalles);
+
+        //Datos de usuario
+        Intent intent = getIntent();
+        String nameUser2 = intent.getStringExtra("nombrei");
+        String emailUser = intent.getStringExtra("correoi");
+        String usernameUser = intent.getStringExtra("usuarioi");
+        String passwordUser = intent.getStringExtra("contrasenai");
+        String naciUser = intent.getStringExtra("nacimi");
+        String dirUser = intent.getStringExtra("direi");
+        String numUser = intent.getStringExtra("telefonoi");
 
         detailDesc = findViewById(R.id.detailDesc);
         detailImage = findViewById(R.id.detailImage);
@@ -58,7 +68,15 @@ public class DetallesActivity extends AppCompatActivity {
                     public void onSuccess(Void unused) {
                         reference.child(key).removeValue();
                         Toast.makeText(DetallesActivity.this, "Deleted", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), propiedades.class));
+                        Intent intent3 = new Intent(getApplicationContext(), propiedades.class);
+                        intent3.putExtra("nombrei", nameUser2);
+                        intent3.putExtra("correoi", emailUser);
+                        intent3.putExtra("usuarioi", usernameUser);
+                        intent3.putExtra("contrasenai", passwordUser);
+                        intent3.putExtra("nacimi", naciUser);
+                        intent3.putExtra("direi", dirUser);
+                        intent3.putExtra("telefonoi", numUser);// Agrega los extras que desees enviar
+                        startActivity(intent3);
                         finish();
                     }
                 });
@@ -73,6 +91,13 @@ public class DetallesActivity extends AppCompatActivity {
                         .putExtra("Language", detailLang.getText().toString())
                         .putExtra("Image", imageUrl)
                         .putExtra("Key", key);
+                intent.putExtra("nombrei", nameUser2);
+                intent.putExtra("correoi", emailUser);
+                intent.putExtra("usuarioi", usernameUser);
+                intent.putExtra("contrasenai", passwordUser);
+                intent.putExtra("nacimi", naciUser);
+                intent.putExtra("direi", dirUser);
+                intent.putExtra("telefonoi", numUser);
                 startActivity(intent);
             }
         });

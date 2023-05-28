@@ -30,7 +30,7 @@ import java.util.List;
 
 public class registro extends AppCompatActivity implements View.OnClickListener {
     private Button button4,pick;
-    private EditText usuarioaa, pswdaa,mail,num,fec, nombreaa;
+    private EditText usuarioaa, pswdaa,mail,num,fec, dir, nombreaa;
     private CheckBox box1, box2, box3;
     private Spinner spinner;
     private RadioButton r1,r2;
@@ -78,7 +78,16 @@ public class registro extends AppCompatActivity implements View.OnClickListener 
 
         num = findViewById(R.id.num);
         fec = findViewById(R.id.fec);
-        fec.setEnabled(false);
+        dir = findViewById(R.id.ubica);
+
+        Intent intent = getIntent();
+        String nameUser3 = intent.getStringExtra("nombrei");
+        String emailUser3 = intent.getStringExtra("correoi");
+        String usernameUser3 = intent.getStringExtra("usuarioi");
+        String passwordUser3 = intent.getStringExtra("contrasenai");
+        String naciUser3 = intent.getStringExtra("nacimi");
+        String dirUser3 = intent.getStringExtra("direi");
+        String numUser3 = intent.getStringExtra("telefonoi");
 
 
         button5.setOnClickListener(new View.OnClickListener() {
@@ -101,14 +110,15 @@ public class registro extends AppCompatActivity implements View.OnClickListener 
                 String email = signupEmail.getText().toString();
                 String username = signupUsername.getText().toString();
                 String password = signupPassword.getText().toString();
+                String direccion = dir.getText().toString();
                 String fecha = fec.getText().toString();
                 String numero = num.getText().toString();
 
-                if (!name.isEmpty() && !email.isEmpty() && !username.isEmpty() && !password.isEmpty() && !fecha.isEmpty() && !numero.isEmpty()) {
+                if (!name.isEmpty() && !email.isEmpty() && !username.isEmpty() && !password.isEmpty() && !fecha.isEmpty() && !numero.isEmpty() && !direccion.isEmpty()) {
                     // Los campos están llenos, realizar alguna acción
                     // Por ejemplo, enviar los datos a través de un botón de envío o realizar alguna operación
                     // ...
-                    HelperClass helperClass = new HelperClass(name, email, username, password, fecha, numero);
+                    HelperClass helperClass = new HelperClass(name, email, username, password, fecha, numero, direccion);
                     reference.child(username).setValue(helperClass);
 
                     Toast.makeText(registro.this, "Registro exitoso", Toast.LENGTH_SHORT).show();

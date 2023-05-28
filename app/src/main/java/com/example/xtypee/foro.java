@@ -36,6 +36,7 @@ public class foro extends AppCompatActivity {
         String usernameUser = intent.getStringExtra("usuarioi");
         String passwordUser = intent.getStringExtra("contrasenai");
         String naciUser = intent.getStringExtra("nacimi");
+        String dirUser = intent.getStringExtra("direi");
         String numUser = intent.getStringExtra("telefonoi");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
@@ -49,6 +50,7 @@ public class foro extends AppCompatActivity {
                     intenthome.putExtra("usuarioi", usernameUser);
                     intenthome.putExtra("contrasenai", passwordUser);
                     intenthome.putExtra("nacimi", naciUser);
+                    intenthome.putExtra("direi", dirUser);
                     intenthome.putExtra("telefonoi", numUser);// Agrega los extras que desees enviar
                     startActivity(intenthome);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -61,6 +63,7 @@ public class foro extends AppCompatActivity {
                     intentpro.putExtra("usuarioi", usernameUser);
                     intentpro.putExtra("contrasenai", passwordUser);
                     intentpro.putExtra("nacimi", naciUser);
+                    intentpro.putExtra("direi", dirUser);
                     intentpro.putExtra("telefonoi", numUser);// Agrega los extras que desees enviar
                     startActivity(intentpro);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -75,6 +78,7 @@ public class foro extends AppCompatActivity {
                     intentperfil.putExtra("usuarioi", usernameUser);
                     intentperfil.putExtra("contrasenai", passwordUser);
                     intentperfil.putExtra("nacimi", naciUser);
+                    intentperfil.putExtra("direi", dirUser);
                     intentperfil.putExtra("telefonoi", numUser);// Agrega los extras que desees enviar
                     startActivity(intentperfil);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
@@ -87,6 +91,7 @@ public class foro extends AppCompatActivity {
                     intentabout.putExtra("usuarioi", usernameUser);
                     intentabout.putExtra("contrasenai", passwordUser);
                     intentabout.putExtra("nacimi", naciUser);
+                    intentabout.putExtra("direi", dirUser);
                     intentabout.putExtra("telefonoi", numUser);// Agrega los extras que desees enviar
                     startActivity(intentabout);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);

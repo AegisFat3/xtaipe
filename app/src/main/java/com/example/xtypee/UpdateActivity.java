@@ -44,6 +44,16 @@ public class UpdateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update);
+        //Datos de usuario
+        Intent intent = getIntent();
+        String nameUser2 = intent.getStringExtra("nombrei");
+        String emailUser = intent.getStringExtra("correoi");
+        String usernameUser = intent.getStringExtra("usuarioi");
+        String passwordUser = intent.getStringExtra("contrasenai");
+        String naciUser = intent.getStringExtra("nacimi");
+        String dirUser = intent.getStringExtra("direi");
+        String numUser = intent.getStringExtra("telefonoi");
+
         updateButton = findViewById(R.id.updateButton);
         updateDesc = findViewById(R.id.updateDesc);
         updateImage = findViewById(R.id.updateImage);
@@ -85,8 +95,16 @@ public class UpdateActivity extends AppCompatActivity {
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent intent = new Intent(UpdateActivity.this, propiedades.class);
+                intent.putExtra("nombrei", nameUser2);
+                intent.putExtra("correoi", emailUser);
+                intent.putExtra("usuarioi", usernameUser);
+                intent.putExtra("contrasenai", passwordUser);
+                intent.putExtra("nacimi", naciUser);
+                intent.putExtra("direi", dirUser);
+                intent.putExtra("telefonoi", numUser);// Agrega los extras que desees envia
                 saveData();
-                Intent intent = new Intent(UpdateActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

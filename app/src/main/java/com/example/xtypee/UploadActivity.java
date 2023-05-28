@@ -41,6 +41,17 @@ public class UploadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
+
+        //Datos de usuario
+        Intent intent = getIntent();
+        String nameUser2 = intent.getStringExtra("nombrei");
+        String emailUser = intent.getStringExtra("correoi");
+        String usernameUser = intent.getStringExtra("usuarioi");
+        String passwordUser = intent.getStringExtra("contrasenai");
+        String naciUser = intent.getStringExtra("nacimi");
+        String dirUser = intent.getStringExtra("direi");
+        String numUser = intent.getStringExtra("telefonoi");
+
         uploadImage = findViewById(R.id.uploadImage);
         uploadDesc = findViewById(R.id.uploadDesc);
         uploadTopic = findViewById(R.id.uploadTopic);

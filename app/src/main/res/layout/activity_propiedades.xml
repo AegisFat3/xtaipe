@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/back"
+    android:background="@drawable/bglogin"
     tools:context=".propiedades">
 
     <androidx.appcompat.widget.SearchView
+        android:id="@+id/search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        android:id="@+id/search"
-        app:iconifiedByDefault="false"
-        app:searchHintIcon="@null"
-        app:queryHint="Search..."
+        android:background="@drawable/lavender_border"
         android:focusable="false"
         app:closeIcon="@drawable/ic_baseline_clear_24"
-        app:searchIcon="@drawable/ic_baseline_search_24"
-        android:background="@drawable/lavender_border"/>
+        app:iconifiedByDefault="false"
+        android:textColor="@color/colorWhite"
+        app:queryHint="Search..."
+        app:searchHintIcon="@null"
+        app:searchIcon="@drawable/ic_baseline_search_24" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -50,10 +50,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/bottom_background"
         android:elevation="2dp"
         app:itemIconSize="30dp"

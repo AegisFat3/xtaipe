@@ -34,7 +34,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/uploadimg"
+                android:src="@drawable/uploada"
                 android:id="@+id/updateImage"
                 android:layout_marginTop="10dp"
                 android:scaleType="fitXY"/>
@@ -69,6 +69,8 @@
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
                 android:hint="Ingresa el precio"
+                android:inputType="number"
+                android:digits="0123456789"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary" />
 

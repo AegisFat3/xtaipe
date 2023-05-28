@@ -2,15 +2,16 @@ package com.example.xtypee;
 
 public class HelperClass {
 
-    String nombrei, correoi, usuarioi, contrasenai, nacimi, telefonoi;
+    String nombrei, correoi, usuarioi, contrasenai, nacimi, telefonoi, direi;
 
-    public HelperClass(String nombrei, String correoi, String usuarioi, String contrasenai, String nacimi, String telefonoi) {
+    public HelperClass(String nombrei, String correoi, String usuarioi, String contrasenai, String nacimi, String telefonoi, String direi) {
         this.nombrei = nombrei;
         this.correoi = correoi;
         this.usuarioi = usuarioi;
         this.contrasenai = contrasenai;
         this.nacimi = nacimi;
         this.telefonoi = telefonoi;
+        this.direi = direi;
     }
 
     public String getNombrei() {
@@ -58,7 +59,15 @@ public class HelperClass {
     }
 
     public void setTelefonoi(String telefonoi) {
-        this.contrasenai = telefonoi;
+        this.telefonoi = telefonoi;
+    }
+
+    public String getDirei() {
+        return direi;
+    }
+
+    public void setDirei(String direi) {
+        this.direi = direi;
     }
 
     public HelperClass() {
