@@ -33,7 +33,7 @@ import java.util.Calendar;
 public class UploadActivity extends AppCompatActivity {
     ImageView uploadImage;
     Button saveButton;
-    EditText uploadTopic, uploadDesc, uploadLang;
+    EditText uploadTopic, uploadDesc, uploadLang, uploadTipo, uploadDirec, uploadTam, uploadHabi, uploadBanos, uploadEs;
     String imageURL;
     Uri uri;
 
@@ -56,6 +56,13 @@ public class UploadActivity extends AppCompatActivity {
         uploadDesc = findViewById(R.id.uploadDesc);
         uploadTopic = findViewById(R.id.uploadTopic);
         uploadLang = findViewById(R.id.uploadLang);
+        uploadTipo = findViewById(R.id.uploadTipo);
+        uploadDirec = findViewById(R.id.uploadDirec);
+        uploadTam = findViewById(R.id.uploadTam);
+        uploadHabi = findViewById(R.id.uploadHabi);
+        uploadBanos = findViewById(R.id.uploadBanos);
+        uploadEs = findViewById(R.id.uploadEs);
+
         saveButton = findViewById(R.id.saveButton);
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -116,7 +123,13 @@ public class UploadActivity extends AppCompatActivity {
         String title = uploadTopic.getText().toString();
         String desc = uploadDesc.getText().toString();
         String lang = uploadLang.getText().toString();
-        ListData dataClass = new ListData(title, desc, lang, imageURL);
+        String tipo = uploadTipo.getText().toString();
+        String dire = uploadDirec.getText().toString();
+        String tam = uploadTam.getText().toString();
+        String habi = uploadHabi.getText().toString();
+        String banos = uploadBanos.getText().toString();
+        String es = uploadEs.getText().toString();
+        ListData dataClass = new ListData(title, desc, lang, tipo, dire, tam, habi, banos, es, imageURL);
         //We are changing the child from title to currentDate,
         // because we will be updating title as well and it may affect child value.
         String currentDate = title;

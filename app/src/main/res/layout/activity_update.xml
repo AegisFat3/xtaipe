@@ -51,13 +51,76 @@
                 android:textColor="@color/colorPrimary" />
 
             <EditText
-                android:id="@+id/updateDesc"
+                android:id="@+id/updateTipo"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
-                android:hint="Ingresa una descripción"
+                android:hint="Típo de propiedad"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/updateDirec"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Dirección"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/updateTam"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Tamaño en m²"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/updateHabi"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Número de habitaciones"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/updateBanos"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Número de baños"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/updateEs"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Número de estacionamientos"
+                android:inputType="number"
+                android:digits="0123456789"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary" />
 
@@ -73,6 +136,18 @@
                 android:digits="0123456789"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/updateDesc"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Ingresa una descripción"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
 
             <Button
                 android:id="@+id/updateButton"

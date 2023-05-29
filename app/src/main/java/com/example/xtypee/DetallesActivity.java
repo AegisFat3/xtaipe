@@ -21,7 +21,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class DetallesActivity extends AppCompatActivity {
     public static String TAG = "mensaje";
-    TextView detailDesc, detailTitle, detailLang;
+    TextView detailDesc, detailTitle, detailLang, detailTipo, detailDirec, detailTam, detailHabi, detailBanos, detailEs;
     ImageView detailImage;
     FloatingActionButton deleteButton, editButton;
     String key = "";
@@ -48,11 +48,24 @@ public class DetallesActivity extends AppCompatActivity {
         deleteButton = findViewById(R.id.deleteButton);
         editButton = findViewById(R.id.editButton);
         detailLang = findViewById(R.id.detailLang);
+        detailTipo = findViewById(R.id.detailTipo);
+        detailDirec = findViewById(R.id.detailDirec);
+        detailTam = findViewById(R.id.detailTam);
+        detailHabi = findViewById(R.id.detailHabi);
+        detailBanos = findViewById(R.id.detailBanos);
+        detailEs = findViewById(R.id.detailEs);
+
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             detailDesc.setText(bundle.getString("Description"));
             detailTitle.setText(bundle.getString("Title"));
             detailLang.setText(bundle.getString("Language"));
+            detailTipo.setText(bundle.getString("Tipo"));
+            detailDirec.setText(bundle.getString("Direction"));
+            detailTam.setText(bundle.getString("Tamano"));
+            detailHabi.setText(bundle.getString("Habitaciones"));
+            detailBanos.setText(bundle.getString("Banos"));
+            detailEs.setText(bundle.getString("Estacionamiento"));
             key = bundle.getString("Key");
             imageUrl = bundle.getString("Image");
             Glide.with(this).load(bundle.getString("Image")).into(detailImage);
@@ -89,6 +102,12 @@ public class DetallesActivity extends AppCompatActivity {
                         .putExtra("Title", detailTitle.getText().toString())
                         .putExtra("Description", detailDesc.getText().toString())
                         .putExtra("Language", detailLang.getText().toString())
+                        .putExtra("Tipo", detailTipo.getText().toString())
+                        .putExtra("Direction", detailDirec.getText().toString())
+                        .putExtra("Tamano", detailTam.getText().toString())
+                        .putExtra("Habitaciones", detailHabi.getText().toString())
+                        .putExtra("Banos", detailBanos.getText().toString())
+                        .putExtra("Estacionamiento", detailEs.getText().toString())
                         .putExtra("Image", imageUrl)
                         .putExtra("Key", key);
                 intent.putExtra("nombrei", nameUser2);

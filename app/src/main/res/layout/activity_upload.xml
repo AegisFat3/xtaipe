@@ -53,6 +53,93 @@
                 android:textColor="@color/colorPrimary" />
 
             <EditText
+                android:id="@+id/uploadTipo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Típo de propiedad"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/uploadDirec"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:gravity="start|center_vertical"
+                android:hint="Dirección"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/uploadTam"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:digits="0123456789"
+                android:gravity="start|center_vertical"
+                android:hint="Tamaño en m²"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/uploadHabi"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:digits="0123456789"
+                android:gravity="start|center_vertical"
+                android:hint="Número de habitaciones"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/uploadBanos"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:digits="0123456789"
+                android:gravity="start|center_vertical"
+                android:hint="Número de baños"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/uploadEs"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:digits="0123456789"
+                android:gravity="start|center_vertical"
+                android:hint="Número de estacionamientos"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/uploadLang"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lavender_border"
+                android:digits="0123456789"
+                android:gravity="start|center_vertical"
+                android:hint="Ingresa el precio"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
                 android:id="@+id/uploadDesc"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
@@ -63,18 +150,6 @@
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary" />
 
-            <EditText
-                android:id="@+id/uploadLang"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/lavender_border"
-                android:gravity="start|center_vertical"
-                android:hint="Ingresa el precio"
-                android:inputType="number"
-                android:digits="0123456789"
-                android:padding="16dp"
-                android:textColor="@color/colorPrimary" />
 
             <Button
                 android:id="@+id/saveButton"

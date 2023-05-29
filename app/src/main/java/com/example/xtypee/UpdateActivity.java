@@ -32,8 +32,8 @@ import com.google.firebase.storage.UploadTask;
 public class UpdateActivity extends AppCompatActivity {
     ImageView updateImage;
     Button updateButton;
-    EditText updateDesc, updateTitle, updateLang;
-    String title, desc, lang;
+    EditText updateDesc, updateTitle, updateLang, updateTipo, updateDirec, updateTam, updateHabi, updateBanos, updateEs;
+    String title, desc, lang, tipo, dire, tam, habi, banos, es;
     String imageUrl;
     String key, oldImageURL;
     Uri uri;
@@ -59,6 +59,13 @@ public class UpdateActivity extends AppCompatActivity {
         updateImage = findViewById(R.id.updateImage);
         updateLang = findViewById(R.id.updateLang);
         updateTitle = findViewById(R.id.updateTitle);
+        updateTipo = findViewById(R.id.updateTipo);
+        updateDirec = findViewById(R.id.updateDirec);
+        updateTam = findViewById(R.id.updateTam);
+        updateHabi = findViewById(R.id.updateHabi);
+        updateBanos = findViewById(R.id.updateBanos);
+        updateEs = findViewById(R.id.updateEs);
+
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -80,6 +87,12 @@ public class UpdateActivity extends AppCompatActivity {
             updateTitle.setText(bundle.getString("Title"));
             updateDesc.setText(bundle.getString("Description"));
             updateLang.setText(bundle.getString("Language"));
+            updateTipo.setText(bundle.getString("Tipo"));
+            updateDirec.setText(bundle.getString("Direction"));
+            updateTam.setText(bundle.getString("Tamano"));
+            updateHabi.setText(bundle.getString("Habitaciones"));
+            updateBanos.setText(bundle.getString("Banos"));
+            updateEs.setText(bundle.getString("Estacionamiento"));
             key = bundle.getString("Key");
             oldImageURL = bundle.getString("Image");
         }
@@ -138,7 +151,13 @@ public class UpdateActivity extends AppCompatActivity {
         title = updateTitle.getText().toString().trim();
         desc = updateDesc.getText().toString().trim();
         lang = updateLang.getText().toString();
-        ListData dataClass = new ListData(title, desc, lang, imageUrl);
+        tipo = updateTipo.getText().toString();
+        dire = updateDirec.getText().toString();
+        tam = updateTam.getText().toString();
+        habi = updateHabi.getText().toString();
+        banos = updateBanos.getText().toString();
+        es = updateEs.getText().toString();
+        ListData dataClass = new ListData(title, desc, lang, tipo, dire, tam, habi, banos, es, imageUrl);
         databaseReference.setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

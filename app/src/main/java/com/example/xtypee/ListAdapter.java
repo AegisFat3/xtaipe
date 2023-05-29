@@ -44,6 +44,15 @@ public class ListAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("Description", dataList.get(holder.getAdapterPosition()).getDataDesc());
                 intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
+
+                intent.putExtra("Tipo", dataList.get(holder.getAdapterPosition()).getDataTipo());
+                intent.putExtra("Direction", dataList.get(holder.getAdapterPosition()).getDataDirec());
+                intent.putExtra("Tamano", dataList.get(holder.getAdapterPosition()).getDataTam());
+
+                intent.putExtra("Habitaciones", dataList.get(holder.getAdapterPosition()).getDataHabi());
+                intent.putExtra("Banos", dataList.get(holder.getAdapterPosition()).getDataBanos());
+                intent.putExtra("Estacionamiento", dataList.get(holder.getAdapterPosition()).getDataEs());
+
                 intent.putExtra("Key",dataList.get(holder.getAdapterPosition()).getKey());
                 intent.putExtra("Language", dataList.get(holder.getAdapterPosition()).getDataLang());
                 context.startActivity(intent);
