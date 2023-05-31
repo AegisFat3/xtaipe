@@ -5,25 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/top_background"
+    android:background="@drawable/about"
     tools:context=".about">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Acerca"
-        android:textColor="@color/colorWhite"
-        android:textSize="36sp" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/bottom_background"
         android:elevation="2dp"
         app:itemIconSize="30dp"
@@ -31,4 +24,313 @@
         app:itemRippleColor="@android:color/transparent"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_menu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:text="CONOCENOS"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:fontFamily="@font/raleway" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="220dp"
+            app:cardBackgroundColor="#1F3A66"
+            app:cardCornerRadius="7dp">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Vision"
+                android:textAlignment="center"
+                android:textColor="#8393AA"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_baseline_circle_24"
+                app:fontFamily="@font/raleway" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="15dp"
+                android:padding="5dp"
+                android:text="Ser una empresa lider en desarrollo de software
+de última generación a nivel nacional adaptándonos a las condiciones de mercado y a las demandas
+de nuestros clientes."
+                android:textAlignment="Justify"
+                android:textColor="#BDC2C8"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                app:fontFamily="@font/raleway" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="-160dp"
+            app:cardBackgroundColor="#1F3A66"
+            app:cardCornerRadius="7dp">
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="Mision"
+                android:textAlignment="center"
+                android:textColor="#8393AA"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_baseline_circle_24"
+                app:fontFamily="@font/raleway" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:text="Como expertos en el desarrollo de software y soluciones tecnologica,
+                nos esforzamos por involucrarnos, avanzar, crecer y mejorar continuamente en lo que hacemos."
+                android:textAlignment="Justify"
+                android:textColor="#BDC2C8"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                app:fontFamily="@font/raleway" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:text="Saltando a la innovación"
+            android:textAlignment="left"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:fontFamily="@font/raleway" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="385dp"
+            android:layout_height="160dp"
+            android:layout_marginLeft="15dp"
+            app:cardBackgroundColor="#1F3A66"
+            app:cardCornerRadius="7dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                app:srcCompat="@drawable/innovacion" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:text="Technoswamp nace de la pasión por la tecnología y compromiso
+por desarrollar y ofrecer productos de la más alta calidad. Nuestros clientes están en el centro
+de cadaa decisión que tomamos. Nos esforzamos por superar sus expectativas en cada momento y creamos
+un ambiente de superación e innovación"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                app:fontFamily="@font/raleway" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#1F3A66"
+            app:cardCornerRadius="7dp">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:text="Tiene los mejores diseñadores páginas web antes vistas"
+                android:textAlignment="Justify"
+                android:textColor="#BDC2C8"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                app:fontFamily="@font/raleway" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="18dp"
+                app:srcCompat="@drawable/ic_baseline_check_circle_outline_24" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="175dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="215dp"
+            android:layout_marginTop="-60dp"
+            app:cardBackgroundColor="#1F3A66"
+            app:cardCornerRadius="7dp">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="0dp"
+                android:padding="5dp"
+                android:text="Se caracteriza por destacar por una codificación
+sumamente ordenada y eficaz."
+                android:textAlignment="Justify"
+                android:textColor="#BDC2C8"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                app:fontFamily="@font/raleway" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="18dp"
+                app:srcCompat="@drawable/ic_baseline_check_circle_outline_24" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:text="Redes sociales"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            app:fontFamily="@font/raleway" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="385dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="#1F3A66"
+            app:cardCornerRadius="7dp">
+
+            <Button
+                android:id="@+id/buttonfeis"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/facebook"
+                app:backgroundTint="@color/cardview_shadow_end_color" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/facebook" />
+
+            <Button
+                android:id="@+id/buttonIG"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="150dp"
+                android:background="@drawable/instagram"
+                android:text="."
+                app:backgroundTint="@color/cardview_shadow_end_color"/>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="150dp"
+                app:srcCompat="@drawable/instagram" />
+
+            <Button
+                android:id="@+id/buttonGIT"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/github"
+                app:backgroundTint="@color/cardview_shadow_end_color" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/github" />
+
+            <Button
+                android:id="@+id/buttonTT"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/gorjeo"
+                app:backgroundTint="@color/cardview_shadow_end_color" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="29dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="290dp"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@drawable/gorjeo" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 </RelativeLayout>

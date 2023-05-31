@@ -3,16 +3,63 @@ package com.example.xtypee;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class about extends AppCompatActivity {
+    Button buttonfeis, buttonIG, buttonTT, buttonGIT;
+    String _url="https://www.instagram.com/technoswamp/";
+    String _urlT="https://twitter.com/Technoswam";
+    String _urlfb="https://www.facebook.com/profile.php?id=100086036944709&mibextid=ZbWKwL";
+    String _urlgit="https://github.com/Technoswamp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        buttonfeis = findViewById(R.id.buttonfeis);
+        buttonIG = findViewById(R.id.buttonIG);
+        buttonTT = findViewById(R.id.buttonTT);
+        buttonGIT = findViewById(R.id.buttonGIT);
+        buttonGIT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri _link = Uri.parse(_urlgit);
+                Intent i = new Intent(Intent.ACTION_VIEW, _link);
+                startActivity(i);
+            }
+        });
+
+        buttonfeis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri _link = Uri.parse(_urlfb);
+                Intent i = new Intent(Intent.ACTION_VIEW, _link);
+                startActivity(i);
+            }
+        });
+
+        buttonTT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri _link = Uri.parse(_urlT);
+                Intent i = new Intent(Intent.ACTION_VIEW, _link);
+                startActivity(i);
+            }
+        });
+
+        buttonIG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri _link = Uri.parse(_url);
+                Intent i = new Intent(Intent.ACTION_VIEW, _link);
+                startActivity(i);
+            }
+        });
 
         Intent intent = getIntent();
         String nameUser2 = intent.getStringExtra("nombrei");
