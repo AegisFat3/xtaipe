@@ -157,7 +157,7 @@ public class UpdateActivity extends AppCompatActivity {
         habi = updateHabi.getText().toString();
         banos = updateBanos.getText().toString();
         es = updateEs.getText().toString();
-        ListData dataClass = new ListData(title, desc, lang, tipo, dire, tam, habi, banos, es, imageUrl);
+        ListData dataClass = new ListData(title, tipo, dire, tam, habi, banos, es, lang, desc, imageUrl);
         databaseReference.setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

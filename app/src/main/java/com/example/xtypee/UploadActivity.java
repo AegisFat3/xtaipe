@@ -129,7 +129,7 @@ public class UploadActivity extends AppCompatActivity {
         String habi = uploadHabi.getText().toString();
         String banos = uploadBanos.getText().toString();
         String es = uploadEs.getText().toString();
-        ListData dataClass = new ListData(title, desc, lang, tipo, dire, tam, habi, banos, es, imageURL);
+        ListData dataClass = new ListData(title, tipo, dire, tam, habi, banos, es, lang, desc, imageURL);
         //We are changing the child from title to currentDate,
         // because we will be updating title as well and it may affect child value.
         String currentDate = title;

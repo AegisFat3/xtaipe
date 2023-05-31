@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -59,10 +60,10 @@ public class DetallesActivity extends AppCompatActivity {
         if (bundle != null){
             detailDesc.setText(bundle.getString("Description"));
             detailTitle.setText(bundle.getString("Title"));
-            detailLang.setText(bundle.getString("Language"));
+            detailLang.setText("$ "+bundle.getString("Language"));
             detailTipo.setText(bundle.getString("Tipo"));
             detailDirec.setText(bundle.getString("Direction"));
-            detailTam.setText(bundle.getString("Tamano"));
+            detailTam.setText(bundle.getString("Tamano")+" m²");
             detailHabi.setText(bundle.getString("Habitaciones"));
             detailBanos.setText(bundle.getString("Banos"));
             detailEs.setText(bundle.getString("Estacionamiento"));
@@ -73,6 +74,14 @@ public class DetallesActivity extends AppCompatActivity {
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = getIntent();
+                String nameUser2 = intent.getStringExtra("nombrei");
+                String emailUser = intent.getStringExtra("correoi");
+                String usernameUser = intent.getStringExtra("usuarioi");
+                String passwordUser = intent.getStringExtra("contrasenai");
+                String naciUser = intent.getStringExtra("nacimi");
+                String dirUser = intent.getStringExtra("direi");
+                String numUser = intent.getStringExtra("telefonoi");
                 final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Android Tutorials");
                 FirebaseStorage storage = FirebaseStorage.getInstance();
                 StorageReference storageReference = storage.getReferenceFromUrl(imageUrl);
@@ -83,8 +92,11 @@ public class DetallesActivity extends AppCompatActivity {
                         Toast.makeText(DetallesActivity.this, "Deleted", Toast.LENGTH_SHORT).show();
                         Intent intent3 = new Intent(getApplicationContext(), propiedades.class);
                         intent3.putExtra("nombrei", nameUser2);
+                        Log.d("Nombre de usuario","ola"+nameUser2);
                         intent3.putExtra("correoi", emailUser);
+                        Log.d("Correo","ola"+emailUser);
                         intent3.putExtra("usuarioi", usernameUser);
+
                         intent3.putExtra("contrasenai", passwordUser);
                         intent3.putExtra("nacimi", naciUser);
                         intent3.putExtra("direi", dirUser);

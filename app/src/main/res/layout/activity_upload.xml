@@ -10,17 +10,19 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="20dp"
         app:cardCornerRadius="30dp"
+        android:layout_marginBottom="20dp"
         app:cardElevation="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/lavender_border"
             android:orientation="vertical"
             android:padding="20dp">
@@ -46,6 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
+                android:maxLength="15"
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
                 android:hint="Título de la publicación"
@@ -57,6 +60,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
+                android:maxLength="10"
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
                 android:hint="Típo de propiedad"
@@ -71,6 +75,7 @@
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
                 android:hint="Dirección"
+                android:maxLength="28"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary" />
 
@@ -81,6 +86,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
                 android:digits="0123456789"
+                android:maxLength="3"
                 android:gravity="start|center_vertical"
                 android:hint="Tamaño en m²"
                 android:inputType="number"
@@ -94,6 +100,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
                 android:digits="0123456789"
+                android:maxLength="2"
                 android:gravity="start|center_vertical"
                 android:hint="Número de habitaciones"
                 android:inputType="number"
@@ -105,6 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
+                android:maxLength="2"
                 android:background="@drawable/lavender_border"
                 android:digits="0123456789"
                 android:gravity="start|center_vertical"
@@ -118,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
+                android:maxLength="1"
                 android:background="@drawable/lavender_border"
                 android:digits="0123456789"
                 android:gravity="start|center_vertical"
@@ -132,6 +141,7 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/lavender_border"
+                android:maxLength="8"
                 android:digits="0123456789"
                 android:gravity="start|center_vertical"
                 android:hint="Ingresa el precio"
@@ -147,6 +157,7 @@
                 android:background="@drawable/lavender_border"
                 android:gravity="start|center_vertical"
                 android:hint="Ingresa una descripción"
+                android:maxLength="28"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary" />
 

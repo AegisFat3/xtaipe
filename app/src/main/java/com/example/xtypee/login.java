@@ -139,11 +139,11 @@ public class login extends AppCompatActivity {
                         intent.putExtra("telefonoi", telFromDB);
                         startActivity(intent);
                     } else {
-                        loginPassword.setError("Invalid Credentials");
+                        loginPassword.setError("Contraseña incorrecta");
                         loginPassword.requestFocus();
                     }
                 } else {
-                    loginUsername.setError("No existe el usuario");
+                    loginUsername.setError("Usuario inexistente");
                     loginUsername.requestFocus();
                 }
             }

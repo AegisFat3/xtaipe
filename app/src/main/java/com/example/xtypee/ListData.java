@@ -8,8 +8,8 @@ public class ListData {
     private String dataHabi;
     private String dataBanos;
     private String dataEs;
-    private String dataDesc;
     private String dataLang;
+    private String dataDesc;
     private String dataImage;
     private String key;
     public String getKey() {
@@ -20,15 +20,6 @@ public class ListData {
     }
     public String getDataTitle() {
         return dataTitle;
-    }
-    public String getDataDesc() {
-        return dataDesc;
-    }
-    public String getDataLang() {
-        return dataLang;
-    }
-    public String getDataImage() {
-        return dataImage;
     }
     public String getDataTipo() {
         return dataTipo;
@@ -48,18 +39,29 @@ public class ListData {
     public String getDataEs() {
         return dataEs;
     }
+    public String getDataLang() {
+        return dataLang;
+    }
+    public String getDataDesc() {
+        return dataDesc;
+    }
+    public String getDataImage() {
+        return dataImage;
+    }
 
-    public ListData(String dataTitle, String dataDesc, String dataLang, String dataImage, String dataTipo, String dataDirec, String dataTam, String dataHabi, String dataBanos, String dataEs) {
+
+    public ListData(String dataTitle, String dataTipo, String dataDirec, String dataTam, String dataHabi, String dataBanos, String dataEs, String dataLang, String dataDesc, String dataImage) {
         this.dataTitle = dataTitle;
-        this.dataDesc = dataDesc;
-        this.dataLang = dataLang;
-        this.dataImage = dataImage;
         this.dataTipo = dataTipo;
         this.dataDirec = dataDirec;
         this.dataTam = dataTam;
         this.dataHabi = dataHabi;
         this.dataBanos = dataBanos;
         this.dataEs = dataEs;
+        this.dataLang = dataLang;
+        this.dataDesc = dataDesc;
+        this.dataImage = dataImage;
+
     }
 
     public ListData(){

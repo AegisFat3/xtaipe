@@ -17,8 +17,8 @@
     <string name="topText1">¿Ya tienes una cuenta?</string>
     <string name="textNewUsu">NOSOTROS TE VAMOS A AYUDAR EN TU NUEVO COMIENZO</string>
     <string name="label5">Registrarse</string>
-    <string name="text777">¿No tienes cuenta? ¡Registrate aqui!</string>
-    <string name="textForgot">¡Bienvenido de nuevo a tu aplicacion!</string>
+    <string name="text777">¿No tienes cuenta? ¡Registrate aquí!</string>
+    <string name="textForgot">¡Bienvenido de nuevo a tu aplicación!</string>
     <string name="boton1">Recuperar contraseña</string>
     <string name="actDT">Date/Time</string>
     <string name="textLogin">¡Ingresa desde tu cuenta!</string>
@@ -31,7 +31,7 @@
     <string name="usuario_label">Usuario</string>
     <string name="password_label">Password</string>
     <string name="olvcontraseña">Recuperar contraseña</string>
-    <string name="login">Iniciar sesion</string>
+    <string name="login">Iniciar sesión</string>
     <string name="registro">¡Registrame!</string>
     <string name="email">Email</string>
     <string name="HoJ">¿Prefiere la horchata o la jamaica?</string>
@@ -48,7 +48,7 @@
     <string name="name">Nombre</string>
     <string name="pick">Buscar fecha</string>
     <string name="w">Welcome to the jungle</string>
-    <string name="inicio_sesion">Iniciar sesion</string>
+    <string name="inicio_sesion">Iniciar sesión</string>
     <string name="aja">Vacio</string>
     <string name="bienvenido">¡Bienvenido!</string>
     <string name="menu">Menú</string>

@@ -20,6 +20,7 @@ import java.util.List;
 public class ListAdapter extends RecyclerView.Adapter<MyViewHolder> {
     private Context context;
     private List<ListData> dataList;
+
     public ListAdapter(Context context, List<ListData> dataList) {
         this.context = context;
         this.dataList = dataList;
@@ -40,6 +41,7 @@ public class ListAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(context, DetallesActivity.class);
                 intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("Description", dataList.get(holder.getAdapterPosition()).getDataDesc());
